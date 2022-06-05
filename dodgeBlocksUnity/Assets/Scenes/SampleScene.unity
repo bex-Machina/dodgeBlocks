@@ -408,9 +408,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3049f93afe9d8ba47b0f90df9e1f61c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cube: {fileID: 8682343009137364425, guid: fb9c3674e0da7f94a970f05e88ea9ee2, type: 3}
+  Block: {fileID: 8682343009137364425, guid: fb9c3674e0da7f94a970f05e88ea9ee2, type: 3}
   secondsBetweenSpawns: 1
   nextSpawnTime: 0
+  spawnSizeMinMax: {x: 0.3, y: 2.3}
+  spawnAngleMax: 5
 --- !u!4 &1519229839
 Transform:
   m_ObjectHideFlags: 0
