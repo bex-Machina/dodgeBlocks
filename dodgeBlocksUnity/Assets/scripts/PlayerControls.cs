@@ -29,4 +29,12 @@ public class PlayerControls : MonoBehaviour
             transform.position = new Vector3(-halfWidth, transform.position.y);
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Falling Block")
+        {
+            Destroy(gameObject);
+        }
+    }
 }
