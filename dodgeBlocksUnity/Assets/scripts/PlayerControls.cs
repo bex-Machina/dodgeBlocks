@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerControls : MonoBehaviour
 {
     float speed = 7f;
     float halfWidth;
+    public UnityEvent GameOverEvent;
     
     // Start is called before the first frame update
     void Start()
@@ -30,10 +32,15 @@ public class PlayerControls : MonoBehaviour
         }
     }
 
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Falling Block")
         {
+            if (GameOverEvent != null)
+            {
+                GameOverEvent.Invoke();
+            }
             Destroy(gameObject);
         }
     }
