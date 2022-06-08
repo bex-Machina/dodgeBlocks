@@ -27,7 +27,7 @@ public class GameMenuOver : MonoBehaviour
 
     void gameOver()
     {
-        score.text = Time.time.ToString();
+        score.text = Mathf.RoundToInt(Time.timeSinceLevelLoad).ToString();
         gameOverFlag = true;
         gameMenuOver.SetActive(true);
     }
